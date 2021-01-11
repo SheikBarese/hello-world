@@ -12,13 +12,13 @@ def validate_user(user):
 
 def validate_password(password):
     password_to_validate = input("Digite sua senha:")
-    if password_to_validate == password:
+    if password_to_validate == password and password_to_validate.isnumeric(): #se a senha que escolher contiver letras+números, mudar o "isnumeric" para "isdigit"
         print("Acesso permitido")
     else:
-        print("Senha incorreta!")
+        print("Senha inválida ou incorreta!")
         stop(a)
-        
- def stop(a):
+
+def stop(a):
     print("1 - tentar novamente \n2 - desligar o sistema")
     a = int(input())
     if a == 1:
@@ -30,6 +30,8 @@ def validate_password(password):
        stop(a)
         
 validate_user(user)
+
+    
 
     
 
