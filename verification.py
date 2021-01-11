@@ -3,18 +3,6 @@ user = "caiovictor023"
 password = "2391"
 a = int
 
-def stop(a):
-    print("1 - tentar novamente \n2 - desligar o sistema")
-    a = int(input())
-    if a == 1:
-        validate_password(password)
-    elif a == 2:
-        print("Sistema desligado")
-    else:
-       print("1 - tentar novamente \n2 - desligar o sistema")
-       stop(a)
-
-
 def validate_user(user):
     user_to_validate = input("Digite seu usuário:")
     if user_to_validate != user:
@@ -29,6 +17,17 @@ def validate_password(password):
     else:
         print("Senha incorreta!")
         stop(a)
+        
+ def stop(a):
+    print("1 - tentar novamente \n2 - desligar o sistema")
+    a = int(input())
+    if a == 1:
+        validate_password(password)
+    elif a == 2:
+        print("Sistema desligado")
+    else:
+       print("1 - tentar novamente \n2 - desligar o sistema")
+       stop(a)
         
 validate_user(user)
 
