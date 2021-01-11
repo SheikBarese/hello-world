@@ -1,4 +1,3 @@
-
 user = "example23"
 password = "1234"
 option = int
@@ -20,7 +19,7 @@ def validate_password(password):
 
 def stop(option):
     print("1 - tentar novamente \n2 - desligar o sistema")
-    a = int(input())
+    option = int(input())
     if option == 1:
         validate_password(password)
     elif option == 2:
@@ -28,11 +27,5 @@ def stop(option):
     else:
        print("1 - tentar novamente \n2 - desligar o sistema")
        stop(option)
-        
+
 validate_user(user)
-
-    
-
-    
-
-
