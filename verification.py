@@ -1,7 +1,7 @@
 
 user = "example23"
 password = "1234"
-a = int
+option = int
 
 def validate_user(user):
     user_to_validate = input("Digite seu usuário:")
@@ -16,18 +16,18 @@ def validate_password(password):
         print("Acesso permitido")
     else:
         print("Senha inválida ou incorreta!")
-        stop(a)
+        stop(option)
 
-def stop(a):
+def stop(option):
     print("1 - tentar novamente \n2 - desligar o sistema")
     a = int(input())
-    if a == 1:
+    if option == 1:
         validate_password(password)
-    elif a == 2:
+    elif option == 2:
         print("Sistema desligado")
     else:
        print("1 - tentar novamente \n2 - desligar o sistema")
-       stop(a)
+       stop(option)
         
 validate_user(user)
 
